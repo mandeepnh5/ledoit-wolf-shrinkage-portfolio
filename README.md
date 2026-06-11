@@ -1,6 +1,6 @@
 # Ledoit-Wolf Shrinkage for Portfolio Optimisation
 
-Implementation of Ledoit-Wolf (2004) covariance shrinkage applied to a
+Implementation of Ledoit-Wolf covariance shrinkage applied to a
 Maximum-Sharpe portfolio on 12 NSE stocks. The notebook derives the optimal
 shrinkage intensity by hand, checks it against `scikit-learn`, and compares
 the resulting portfolio against the standard sample-covariance MPT baseline
