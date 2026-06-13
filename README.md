@@ -10,6 +10,8 @@ out-of-sample returns.
 **Stack:** Python, NumPy, pandas, SciPy (`trust-constr`), scikit-learn
 (`LedoitWolf`), yfinance, Matplotlib, seaborn.
 
+This was done as a course project for DA6701 - Data Science and AI in Finance at IIT Madras
+
 ## Problem
 
 Mean-variance optimisation needs the inverse of a $p \times p$ covariance
@@ -110,28 +112,28 @@ The pipeline in `finance_2.ipynb` is split into 12 numbered sections.
 
 ## Findings
 
-**Conditioning.** Shrinkage cuts $\kappa$ from 38.0 to 15.2 by pulling the
+**Conditioning:** Shrinkage cuts $\kappa$ from 38.0 to 15.2 by pulling the
 eigenvalue spectrum toward $\bar{\lambda}$. The bootstrap distribution of
 $\kappa$ confirms the sample estimator is also statistically unstable, not
 just large.
 
-**Manual derivation.** The closed form $\alpha^* = \hat\beta/\hat\delta$
+**Manual derivation:** The closed form $\alpha^* = \hat\beta/\hat\delta$
 coded from the 2004 paper matches scikit-learn to machine precision (about
 $10^{-17}$), so the value `LedoitWolf().shrinkage_` returns is the same one
 the formula gives by hand on this data.
 
-**Stability around the crisis.** Adding the four banking-shock months
+**Stability around the crisis:** Adding the four banking-shock months
 (March to June 2023) to the estimation window shifts the weights by 14.45
 pp under the sample estimator and 8.03 pp under LW, so LW is roughly 1.8x
 more stable. Banking-sector names take most of the hit under both
 estimators, but the per-stock shifts are smaller under LW.
 
-**Out-of-sample.** Over the 12-month hold-out, LW gives a higher annualised
+**Out-of-sample:** Over the 12-month hold-out, LW gives a higher annualised
 return (7.00% vs 6.44%), lower volatility (9.96% vs 10.29%), a shallower max
 drawdown (-5.50% vs -6.31%), and a better Sharpe (0.050 vs -0.006). The
 absolute gap is small but the sign is consistent on all four metrics.
 
-**Turnover.** Average monthly turnover is close on this universe (0.186 vs
+**Turnover:** Average monthly turnover is close on this universe (0.186 vs
 0.190). The stability advantage of LW shows up mainly when the regime
 shifts (the crisis test), not in routine month-to-month rebalancing on a
 small, sector-diversified universe.
