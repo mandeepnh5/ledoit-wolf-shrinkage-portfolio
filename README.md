@@ -10,7 +10,7 @@ out-of-sample returns.
 **Stack:** Python, NumPy, pandas, SciPy (`trust-constr`), scikit-learn
 (`LedoitWolf`), yfinance, Matplotlib, seaborn.
 
-This was done as a course project for DA6701 - Data Science and AI in Finance at IIT Madras
+This was done as a course project for DA6701 - Data Science and AI in Finance at IIT Madras.
 
 ## Problem
 
