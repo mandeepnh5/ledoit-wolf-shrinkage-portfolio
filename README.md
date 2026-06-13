@@ -26,11 +26,11 @@ Ledoit-Wolf replaces $\hat{\Sigma}$ with a convex combination of itself and a
 scaled identity:
 
 $$
-\hat{\Sigma}_{\mathrm{LW}} = (1-\alpha^*)\,\hat{\Sigma} + \alpha^*\,\bar{\lambda}\,\mathbf{I},
+\hat{\Sigma}_{\mathrm{LW}} = (1-\alpha^{\ast})\,\hat{\Sigma} + \alpha^{\ast}\,\bar{\lambda}\,\mathbf{I},
 \qquad \bar{\lambda} = \mathrm{tr}(\hat{\Sigma})/p
 $$
 
-The shrinkage intensity $\alpha^* \in [0,1]$ minimises the expected Frobenius
+The shrinkage intensity $\alpha^{*} \in [0,1]$ minimises the expected Frobenius
 loss $\mathbb{E}\|\hat{\Sigma}_{\mathrm{LW}} - \Sigma\|_F^2$ in closed form.
 
 ## Results
